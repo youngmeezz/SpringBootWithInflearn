@@ -17,7 +17,7 @@ class MemoryMemberRepositoryTest {
     public void afterEach(){
         repository.clearStore();
     }//testmethod끝나고 callback 메소드
-    
+
     @Test
     public void save(){
         Member member = new Member();
