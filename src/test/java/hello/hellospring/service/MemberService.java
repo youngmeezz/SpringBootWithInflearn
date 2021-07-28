@@ -9,9 +9,13 @@ import java.util.List;
 import java.util.Optional;
 
 public class MemberService {
+    //alt enter로 테스트 클래스 만들기
+    private final MemberRepository memberRepository;
 
-    private final MemberRepository memberRepository = new MemoryMemberRepository();
-
+    //직접 new하지 않고 외부에서 memberRepository 넣어줌 = > dependency injection DI
+    public MemberService(MemberRepository memberRepository){
+        this.memberRepository = memberRepository;
+    }
     /**
      * 회원 가입
      * @param member
