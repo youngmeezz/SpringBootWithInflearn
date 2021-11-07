@@ -30,6 +30,11 @@ public class MemberController {
         return "members/createMemberForm";
     }
 
+    /**
+     * 회원등록
+     * @param form
+     * @return
+     */
     @PostMapping("/members/new")
     public String create(MemberForm form){
         Member member = new Member();
@@ -40,6 +45,11 @@ public class MemberController {
         return "redirect:/";
     }
 
+    /**
+     * 회원조회
+     * @param model
+     * @return
+     */
     @GetMapping("/members")
     public String list(Model model){
         List<Member> members = memberService.findMembers();
